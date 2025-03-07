@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_sqlalchemy import DBSessionMiddleware
 
-from endpoints import student_router
+from api.routers import api_router
 
 app = FastAPI(openapi_prefix="/api/v1")
 app.add_middleware(
@@ -18,7 +18,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(student_router)
+app.include_router(api_router)
 
 
 if __name__ == "__main__":
