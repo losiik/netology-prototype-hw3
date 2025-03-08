@@ -24,3 +24,15 @@ class AcademicPerformance(BaseModel):
 class Faculty(BaseModel):
     id: Optional[int] = None
     faculty_name: str
+
+
+class User(BaseModel):
+    id: Optional[int] = None
+    login: str
+    password: str
+
+
+class AuthUser(BaseModel):
+    id: Optional[int] = None
+    login: str
+    access_token: str

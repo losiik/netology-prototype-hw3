@@ -35,3 +35,11 @@ class Course(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     course_name = Column(String, nullable=False, unique=True)
+
+
+class User(Base):
+    __tablename__ = "user"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    login = Column(String, nullable=False, unique=True)
+    password = Column(String, nullable=False)
