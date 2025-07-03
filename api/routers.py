@@ -5,6 +5,7 @@ from api.endpoints.course import course_router
 from api.endpoints.faculty import faculty_router
 from api.endpoints.student import student_router
 from api.endpoints.auth import auth_router
+from api.endpoints.csv import csv_router
 
 
 api_router = APIRouter()
@@ -13,3 +14,4 @@ api_router.include_router(course_router)
 api_router.include_router(faculty_router)
 api_router.include_router(student_router)
 api_router.include_router(auth_router)
+api_router.include_router(csv_router)
