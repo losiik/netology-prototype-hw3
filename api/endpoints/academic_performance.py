@@ -67,5 +67,3 @@ async def update_academic_performance(
         academic_performance=academic_performance
     )
     return academic_performance
-
-test
